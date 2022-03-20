@@ -1,0 +1,31 @@
+/* color font*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #384e71;
+    font-size: 60px !important;
+}
+.presentacion{
+position: absolute;
+width: 556px;
+height: 70px;
+left: 116px;
+top: 180px;
+line-height: 75px;
+}
+
+.presentacion2{
+    line-height: 35px;
+    top: 20px !important;
+    color: #384e71;
+    font-size: 30px !important;
+}
+.img-fluid{
+position: absolute;
+width: 378px;
+height: 98px;
+left: 700px;
+top: 10px;
+}
