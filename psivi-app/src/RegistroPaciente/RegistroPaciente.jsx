@@ -3,9 +3,9 @@ import "./RegistroPaciente.css";
 
 export function RegistroPaciente(){
     return (        
-    <div>
-            <form>
-  <fieldset disabled>
+    <div id="formulario">
+    <form >
+  <fieldset>
     <legend>Registro pacientes:</legend>
     <br></br>
     <div class="mb-3">
