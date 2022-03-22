@@ -1,6 +1,6 @@
 import React from "react";
 import "./Landing.css";
-import MainImage from "C:/Users/jhan_/Documents/PsiVi_react/psi-vi-react/psivi-app/src/Assets/Images/main_psicology.jpg";
+import MainImage from "D:/Proyecto/psi-vi-react/psivi-app/src/Assets/Images/main_psicology.jpg";
 
 export function Landing(){
     return (
