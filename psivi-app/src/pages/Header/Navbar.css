@@ -1,6 +1,10 @@
 .container {
     color: #384e71 !important;
 }
+.navbar-nav{
+    align-items: center;
+    display: flex;
+}
 a li{
     color: #384e71 !important;
 }
