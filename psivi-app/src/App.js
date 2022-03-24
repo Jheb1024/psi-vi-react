@@ -8,7 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Landing } from './Landing/Landing';
-import Navbar from './pages/Header/Navbar';
+import Header from './pages/Header/Navbar';
 import bootstrap from 'bootstrap';
 import Footer from './pages/Footer/Footer';
 import RegistroPsicologo from './pages/RegistroPsicologo/RegistroPsicologo';
@@ -21,7 +21,7 @@ function App() {
 
     <BrowserRouter>
       <div className="App bg-light">
-        <Navbar></Navbar>
+        <Header></Header>
         <Routes>
           <Route path="/" element={<Landing />}/>
           <Route path="/registro-psicologo" element={<RegistroPsicologo />}/>

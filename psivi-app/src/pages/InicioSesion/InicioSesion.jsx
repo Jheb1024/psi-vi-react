@@ -1,5 +1,6 @@
 import React from 'react'
 import "./InicioSesion.css";
+import {Link} from "react-router-dom";
 
 function InicioSesion() {
     return (
@@ -19,7 +20,11 @@ function InicioSesion() {
 
 
                 <div id="formFooter">
-                    <a class="underlineHover" href="#">¿Olvidaste tu contraseña?</a>
+                    <Link to="/">¿Olvidaste tu contraseña?</Link>
+                    <p>¿Aun no tienes una cuenta?</p>
+                    <Link to="/registro-paciente"> Paciente</Link>
+                    <br></br>
+                    <Link to="/registro-psicologo"> Psicologo</Link>
                 </div>
 
             </div>
