@@ -2,7 +2,7 @@ import React from 'react'
 
 function RegistroPaciente() {
   return (
-    <div id="formulario">
+    <div id="formulario" style={{display:'flex'}}>
     <form >
   <fieldset>
     <legend>Registro pacientes:</legend>
@@ -53,55 +53,15 @@ function RegistroPaciente() {
     </div>
 
     <div class="mb-3">
-      <label for="disabledSelect" class="form-label">Dias preferibles para horarios de contacto</label>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-      <label class="form-check-label" for="disabledFieldsetCheck">
-          Lunes
-        </label>
-        </div>
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Martes
-        </label>
-        </div>
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Miercoles
-        </label>
-        </div>
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Jueves
-        </label>
-        </div>
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Viernes
-        </label>
-        </div>
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Sabado
-        </label>
-        </div>
-
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"/>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Domingo
-        </label>
-        </div>
+    <select class="form-select" aria-label="Default select example">
+  <option selected>Días preferibles de contacto</option>
+  <option value="1">Lunes</option>
+  <option value="2">Martes</option>
+  <option value="3">Miercoles</option>
+  <option value="3">Jueves</option>
+  <option value="3">Sábado</option>
+  <option value="3">Domingo</option>
+</select>
         
     </div>
     

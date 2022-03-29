@@ -25,6 +25,7 @@ function Header() {
               <NavDropdown.Item href="registro-paciente">Paciente</NavDropdown.Item>
             </NavDropdown>
             <LinkContainer to="/inicio-sesion"><Nav.Link>Iniciar Sesión</Nav.Link></LinkContainer>
+            <LinkContainer to="/inicio-sesion"><Nav.Link>Cerrar Sesión</Nav.Link></LinkContainer>
             
 
           </Nav>
