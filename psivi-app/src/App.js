@@ -14,6 +14,7 @@ import Footer from './pages/Footer/Footer';
 import RegistroPsicologo from './pages/RegistroPsicologo/RegistroPsicologo';
 import InicioSesion from './pages/InicioSesion/InicioSesion';
 import RegistroPaciente from './pages/RegistroPaciente/RegistroPaciente';
+import PacienteHome from './pages/Paciente/PacienteHome';
 //Aqui siempre vamos a definir nuestras rutas
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/registro-psicologo" element={<RegistroPsicologo />}/>
           <Route path="/registro-paciente" element={<RegistroPaciente/>}/>
           <Route path="/inicio-sesion" element={<InicioSesion/>}/>
+          <Route path="/home-paciente" element={<PacienteHome/>}/>
         </Routes>
         
 
