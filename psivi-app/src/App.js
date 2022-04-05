@@ -1,19 +1,49 @@
 import logo from './logo.svg';
 import './App.css';
+import { React } from "react";
+import * as ReactDOM from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { Landing } from './Landing/Landing';
-import { RegistroPaciente } from './RegistroPaciente/RegistroPaciente';
-import Navbar from './pages/Header/Navbar';
+
+import Header from './pages/Header/Navbar.js';
+
 import bootstrap from 'bootstrap';
 import Footer from './pages/Footer/Footer';
+import RegistroPsicologo from './pages/RegistroPsicologo/RegistroPsicologo';
+import InicioSesion from './pages/InicioSesion/InicioSesion';
+import RegistroPaciente from './pages/RegistroPaciente/RegistroPaciente';
 //Aqui siempre vamos a definir nuestras rutas
 
 function App() {
   return (
-    <div className="App bg-light">
-      <Navbar></Navbar>
-      <RegistroPaciente></RegistroPaciente>
-      
-    </div>
+
+    <BrowserRouter>
+      <div className="App bg-light">
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Landing />}/>
+          <Route path="/registro-psicologo" element={<RegistroPsicologo />}/>
+          <Route path="/registro-paciente" element={<RegistroPaciente/>}/>
+          <Route path="/inicio-sesion" element={<InicioSesion/>}/>
+        </Routes>
+        
+
+        
+      </div>
+    </BrowserRouter>
+
+
+
+
+
+
+
+
+
   );
 }
 

@@ -1,49 +1,38 @@
-import React from 'react';
+import React from "react";
 import "./Navbar.css";
+import { Dropdown, Navbar, Nav, Container, NavDropdown, NavLink } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-const Paciente = (
-  <li>
+const Paciente = <li></li>;
 
-  </li>
-);
-
-function Navbar() {
+function Header() {
   return (
-    <div className='container'>
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand .text-blue .text-darken-lg" href="#">Psi-Vi</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Precios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Psicólogos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Categorías</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">¿Quiénes somos?</a>
-              </li>
-            </ul>
+    <Navbar className="nav-color" collapseOnSelect expand="lg">
+      <Container>
+        <LinkContainer to="/">
+          <Navbar.Brand >Psi-Vi</Navbar.Brand></LinkContainer>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <LinkContainer to="/">
+              <Nav.Link >Precios</Nav.Link></LinkContainer>
+            <LinkContainer to="/"><Nav.Link >Categorías</Nav.Link></LinkContainer>
+            <LinkContainer to="/"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
+          </Nav>
+          <Nav>
+            <NavDropdown title="Registro" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="registro-psicologo">Psicologo</NavDropdown.Item>
+              <NavDropdown.Item href="registro-paciente">Paciente</NavDropdown.Item>
+            </NavDropdown>
+            <LinkContainer to="/inicio-sesion"><Nav.Link>Iniciar Sesión</Nav.Link></LinkContainer>
+            <LinkContainer to="/inicio-sesion"><Nav.Link>Cerrar Sesión</Nav.Link></LinkContainer>
+            
 
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Iniciar Sesión</a>
-                <a class="nav-link" href="#">Registrarse</a>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-      </nav>
-    </div>
-  )
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Navbar
+export default Header;
