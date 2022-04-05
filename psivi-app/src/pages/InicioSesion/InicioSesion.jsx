@@ -2,7 +2,7 @@ import React from 'react'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 import { doc, getDoc, getFirestore } from "firebase/firestore";
-import { app } from "C:/Users/jhan_/Documents/PsiVi_react/psi-vi-react/psivi-app/src/auth/firebase-config.js";
+import { app } from "D:/Proyecto/psi-vi-react/psivi-app/src/auth/firebase-config.js";
 
 import "./InicioSesion.css";
 import {Link} from "react-router-dom";

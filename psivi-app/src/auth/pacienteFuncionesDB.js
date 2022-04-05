@@ -20,9 +20,7 @@ export const administradoresP = async function getAdmin(){
 //Nuestra funcin debe ser asincrona
 //Mandar todos los parametros del formulario
 
-export const registro = async function registrarPaciente(nombre, apm, app, edad, fechana, email, password1, motivo, dias)
-{
-export const registro = async function registrarPaciente(email, password1, nombre, apm, app1, edad, fechana){
+export const registro = async function registrarPaciente(email, password1, nombre, apm, app1, edad, fechana, motivo, dias){
 
     const auth = getAuth(app); //primero debemos saber cual es nuestro usuario por defecto no existe
                                 //pero auth nos da uatorización
@@ -76,6 +74,4 @@ export const registro = async function registrarPaciente(email, password1, nombr
 
 }
 
-
-}
 
