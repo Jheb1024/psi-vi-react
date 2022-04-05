@@ -3,6 +3,11 @@
  import React from 'react';
  import { Formik, Form, Field, ErrorMessage } from 'formik';
  import {registro} from "D:/Proyecto/psi-vi-react/psivi-app/src/auth/pacienteFuncionesDB.js";
+
+ import Swal from 'sweetalert2'
+
+
+
  const Basic = () => (
   <div>
 
@@ -26,7 +31,7 @@
     }}
     validate={values => {
       const errors = {};
-      if (!values.email) {
+      if (!values.email || !values.nombre || !values.apellidoMaterno || !values.apellidoPaterno || !values.password || !values.fechaNacimiento || !values.edad || !values.gradoEstudios || !values.inicioEstudios || !values.inicioEstudios || !values.finEstudios || !values.tituloFile || !values.cedulaFile || !values.decisionPsicologo || !values.razonIngreso) {
         errors.email = 'Correo requerido';
         errors.nombre = 'Nombre requerido';
         errors.apellidoMaterno = 'Apellido requerido';
@@ -41,8 +46,12 @@
         errors.cedula = 'Documento requerido';
         errors.decisionPsicologo = "Campo requerido";
         errors.razonIngreso = "Campo requerido;"
+
+      //  Swal.Fire;
+
+
       } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email, values.nombre, values.apellidoMaterno, values.apellidoPaterno, values.fechaNacimiento, values.edad, values.gradoEstudios, values.institucionEgreso, values.inicioEstudios, values.finEstudios, values.tituloFile, values.tituloFile, values.cedulaFile, values.decisionPsicologo, values.razonIngreso)
       ) {
         errors.email = 'Correo no valido';
         errors.nombre = 'Nombre no valido';
@@ -55,9 +64,12 @@
         errors.inicioEstudios = "Fecha no valida";
         errors.finEstudios = 'Fecha no valida';
         errors.tituloFile = "Documento no valido";
-        errors.cedula = 'Documento no valido';
+        errors.cedulaFile = 'Documento no valido';
         errors.decisionPsicologo = "Campo no valido";
         errors.razonIngreso = "Campo no valido";
+
+      
+
       }
       if (values.password.length < 8) {
         errors.password = "La contraseña es demasiado débil";
@@ -87,6 +99,7 @@
   >
 
     {({ isSubmitting }) => (
+
       <Form>
         <fieldset >
           <legend>Registro Psicólogo</legend>
@@ -175,6 +188,7 @@
         </fieldset>
       </Form>
     )}
+
   </Formik>
 </div>
   

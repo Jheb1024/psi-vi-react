@@ -4,6 +4,12 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from "react";
 
 
+import Swal from 'sweetalert2'
+
+import 'D:/Proyecto/psi-vi-react/psivi-app/src/pages/RegistroPsicologo/RegistroPsicologo.css'
+
+
+
 const db = getFirestore(app);
 
 // no le hagan caso esta parte
@@ -57,4 +63,10 @@ export const registro = async function registrarPsicologo(email, password1){
 
     }
 }
-
+/*
+Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Something went wrong!',
+    footer: '<a href="">Why do I have this issue?</a>'
+  })*/

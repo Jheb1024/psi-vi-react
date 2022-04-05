@@ -18,7 +18,7 @@ const Basic = () => (
     }}
     validate={values => {
       const errors = {};
-      if (!values.email) {
+      if (!values.email|| !values.nombre || !values.apellidoMaterno || !values.apellidoPaterno || !values.edad || !values.fechaNacimiento || !values.motivo) {
         errors.email = 'Correo requerido';
         errors.nombre = 'Nombre requerido';
         errors.apellidoPaterno = 'Apellido requerido';
@@ -27,7 +27,7 @@ const Basic = () => (
        errors.fechaNacimiento = 'Fecha de nacimiento requerida';
        errors.motivo = 'Motivos requeridos';
       } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email, values.nombre, values.apellidoMaterno, values.apellidoPaterno, values.edad, values.fechaNacimiento, values.motivo)
       ) {
         errors.nombre = 'Nombre no valido';
         errors.email = 'Direccion de correo no valida';
