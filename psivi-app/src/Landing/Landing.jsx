@@ -5,7 +5,7 @@ import { administradores } from "../auth/psicologoFuncionesDB";
 
 export function Landing(){
 
-    administradores();
+  
 
     return (
     <div className="presentacion">

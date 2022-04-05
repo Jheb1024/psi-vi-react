@@ -39,13 +39,13 @@ function Header() {
             <LinkContainer to="/"><Nav.Link >Categorías</Nav.Link></LinkContainer>
             <LinkContainer to="/"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
           </Nav>
-          <Nav>
-            <NavDropdown title="Registro" id="collasible-nav-dropdown">
+           <Nav>
+           {!currentUser? <NavDropdown title="Registro" id="collasible-nav-dropdown">
               <NavDropdown.Item href="registro-psicologo">Psicologo</NavDropdown.Item>
               <NavDropdown.Item href="registro-paciente">Paciente</NavDropdown.Item>
-            </NavDropdown>
-            <LinkContainer to="/inicio-sesion"><Nav.Link>Iniciar Sesión</Nav.Link></LinkContainer>
-            <LinkContainer to="/inicio-sesion" onClick={cerrarSesion}><Nav.Link>Cerrar Sesión</Nav.Link></LinkContainer>
+            </NavDropdown> :null}
+            {!currentUser? <LinkContainer to="/inicio-sesion"><Nav.Link>Iniciar Sesión</Nav.Link></LinkContainer>:null}
+           {currentUser?  <LinkContainer to="/inicio-sesion" onClick={cerrarSesion}><Nav.Link>Cerrar Sesión</Nav.Link></LinkContainer>:null}
             
 
           </Nav>

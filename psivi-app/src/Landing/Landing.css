@@ -8,12 +8,14 @@ h1{
     font-size: 60px !important;
 }
 .presentacion{
-position: absolute;
+position: relative;
 width: 556px;
 height: 70px;
 left: 116px;
 top: 180px;
+padding-bottom: 50%;
 line-height: 75px;
+
 }
 
 .presentacion2{

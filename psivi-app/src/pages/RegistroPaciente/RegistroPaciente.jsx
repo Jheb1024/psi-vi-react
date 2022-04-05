@@ -42,8 +42,7 @@ const RegistroPaciente = () => (
           <br></br><br></br>
 
           <legend>Registro paciente:</legend>
-          <br></br>
-          <br />
+         
           <div className='row'>
            
               <div class="mb-3">

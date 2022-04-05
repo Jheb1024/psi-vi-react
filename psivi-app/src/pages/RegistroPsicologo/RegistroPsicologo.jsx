@@ -40,11 +40,22 @@ const Basic = () => (
       onSubmit={(values, { setSubmitting }) => {
 
 
-        registro(values.email, values.password);
-        /*setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);*/
+        registro(values.email, 
+          values.password, 
+          values.nombre,
+          values.apellidoPaterno,
+          values.apellidoMaterno,
+          values.edad,
+          values.fechaNacimiento,
+          values.cedulaFile,
+          values.decisionPsicologo,
+          values.institucionEgreso,
+          values.inicioEstudios,
+          values.gradoEstudios,
+          values.razonIngreso,
+          values.finEstudios,
+          values.tituloFile);
+       
       }}
     >
 
@@ -55,65 +66,57 @@ const Basic = () => (
             <div className='row'>
               <div className='col'>
                 <div class="mb-3">
-                  <Field type="email" name="email" />
+                  <Field type="text" name="email" className="form-input" placeholder="Correo"/>
                 </div>
-                <ErrorMessage name="email" component="div" />
+                <ErrorMessage name="email" component="div"/>
                 <div class="mb-3">
-                <Field type="password" name="password" />
+                <Field type="password" name="password" placeholder="Contraseña" />
                 </div>
                 <ErrorMessage name="password" component="div" />
                 <div class="mb-3">
 
-                <Field type="nombre" name="nombre" />
+                <Field type="text" name="nombre" className="form-input" placeholder="Nombre"/>
                 </div>
                 <ErrorMessage name="nombre" component="div" />
                 <div class="mb-3">
-                <Field type="apellidoPaterno" name="apellidoPaterno" /></div>
+                <Field type="text" name="apellidoPaterno" className="form-input" placeholder="Apellido Paterno" /></div>
                 <ErrorMessage name="apellidoPaterno" component="div" />
                 <div class="mb-3">
-                <Field type="apellidoMaterno" name="apellidoMaterno" /></div>
-
+                <Field type="text" name="apellidoMaterno" className="form-input" placeholder="Apellido Materno" /></div>
                 <ErrorMessage name="apellidoMaterno" component="div" />
                 <div class="mb-3">
 
-                <Field type="fechaNacimiento" name="fechaNacimiento" /></div>
+                <Field type="date" name="fechaNacimiento" placeholder="Fecha Nacimiento"/>
+                </div>
                 <ErrorMessage name="fechaNacimiento" component="div" />
-
+                
                 <div class="mb-3">
-
-                <Field type="edad" name="edad" /></div>
-                <ErrorMessage name="edad" component="div" />
-                <div class="mb-3">
-
-                <Field type="gradoEstudios" name="gradoEstudios" /></div>
+                <Field type="text" name="gradoEstudios" placeholder="Grado de estudios"/></div>
                 <ErrorMessage name="gradoEstudios" component="div" />
                 <div class="mb-3">
 
-                <Field type="institucionEgreso" name="institucionEgreso" /></div>
+                <Field type="text" name="institucionEgreso"  placeholder="Institución de egreso"/></div>
                 <ErrorMessage name="institucionEgreso" component="div" />
               </div>
               <div className='col'>
               <div class="mb-3">
-                <Field type="inicioEstudios" name="inicioEstudios" /></div>
+                <label htmlFor='inicioEstudios'>Inicio de estudios</label><br/>
+                <Field type="date" name="inicioEstudios" placeholder="Inicio de estudios"/></div>
                 <ErrorMessage name="inicioEstudios" component="div" />
                 <div class="mb-3">
-                <Field type="finEstudios" name="finEstudios" /></div>
+                <label htmlFor='finEstudios'>Fin de estudios</label><br/>
+                <Field type="date" name="finEstudios" placeholder="Fin de estudios" /></div>
                 <ErrorMessage name="finEstudios" component="div" />
+                
                 <div class="mb-3">
-                <Field type="tituloFile" name="tituloFile" /></div>
-                <ErrorMessage name="tituloFile" component="div" />
-                <div class="mb-3">
-                <Field type="cedulaFile" name="tituloFile" /></div>
-                <ErrorMessage name="cedulaFile" component="div" />
-                <div class="mb-3">
-                <Field type="decisionPsicologo" name="decisionPsicologo" /></div>
+                <Field type="text" name="decisionPsicologo" placeholder="Porque decidiste ser psicólogo?"/></div>
                 <ErrorMessage name="decisionPsicologo" component="div" />
                 <div class="mb-3">
-                <Field type="razonIngreso" name="razonIngreso" /></div>
+                <Field type="text" name="razonIngreso" placeholder="Razon de ingreso a nuestra comunidad?" /></div>
                 <ErrorMessage name="razonIngreso" component="div" />
 
-                <button type="submit" disabled={isSubmitting}>
-                  Submit
+                <button class="btn btn-primary" type="submit" disabled={isSubmitting}>
+                  Registrarse
                 </button>
               </div>
 
