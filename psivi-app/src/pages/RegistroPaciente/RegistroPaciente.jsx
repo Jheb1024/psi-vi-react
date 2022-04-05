@@ -6,6 +6,7 @@ import {registro} from "D:/Proyecto/psi-vi-react/psivi-app/src/auth/pacienteFunc
 
 import "./RegistroPaciente.css";
 
+
 const Basic = () => (
   <div>
   <Formik

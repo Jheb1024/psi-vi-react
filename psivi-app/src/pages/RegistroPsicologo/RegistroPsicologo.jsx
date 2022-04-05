@@ -47,7 +47,7 @@
         errors.decisionPsicologo = "Campo requerido";
         errors.razonIngreso = "Campo requerido;"
 
-      //  Swal.Fire;
+        Swal.Fire;
 
 
       } else if (
