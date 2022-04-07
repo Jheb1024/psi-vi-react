@@ -36,7 +36,7 @@ function Header() {
           <Nav className="me-auto">
             <LinkContainer to="/">
               <Nav.Link >Precios</Nav.Link></LinkContainer>
-            <LinkContainer to="/"><Nav.Link >Categorías</Nav.Link></LinkContainer>
+              <LinkContainer to="lista-psicologo"><Nav.Link >Categorías</Nav.Link></LinkContainer>
             <LinkContainer to="/"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
           </Nav>
           <Nav>

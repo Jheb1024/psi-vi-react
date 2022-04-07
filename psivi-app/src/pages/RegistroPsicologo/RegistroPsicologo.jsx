@@ -31,7 +31,7 @@
     }}
     validate={values => {
       const errors = {};
-      if (!values.email || !values.nombre || !values.apellidoMaterno || !values.apellidoPaterno || !values.password || !values.fechaNacimiento || !values.edad || !values.gradoEstudios || !values.inicioEstudios || !values.inicioEstudios || !values.finEstudios || !values.tituloFile || !values.cedulaFile || !values.decisionPsicologo || !values.razonIngreso) {
+      if (!values.email ) {
         errors.email = 'Correo requerido';
         errors.nombre = 'Nombre requerido';
         errors.apellidoMaterno = 'Apellido requerido';
@@ -42,16 +42,16 @@
         errors.institucionEgreso = 'Institucion requerida';
         errors.inicioEstudios = "Fecha requerida";
         errors.finEstudios = 'Fecha requerida';
-        errors.tituloFile = "Documento requerido";
-        errors.cedula = 'Documento requerido';
+        //errors.tituloFile = "Documento requerido";
+        //errors.cedula = 'Documento requerido';
         errors.decisionPsicologo = "Campo requerido";
         errors.razonIngreso = "Campo requerido;"
 
-        Swal.Fire;
+        //Swal.Fire;
 
 
       } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email, values.nombre, values.apellidoMaterno, values.apellidoPaterno, values.fechaNacimiento, values.edad, values.gradoEstudios, values.institucionEgreso, values.inicioEstudios, values.finEstudios, values.tituloFile, values.tituloFile, values.cedulaFile, values.decisionPsicologo, values.razonIngreso)
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email, values.nombre, values.apellidoMaterno, values.apellidoPaterno, values.fechaNacimiento, values.edad, values.gradoEstudios, values.institucionEgreso, values.inicioEstudios, values.finEstudios, values.decisionPsicologo, values.razonIngreso)
       ) {
         errors.email = 'Correo no valido';
         errors.nombre = 'Nombre no valido';
@@ -63,8 +63,8 @@
         errors.institucionEgreso = 'Institucion no valida';
         errors.inicioEstudios = "Fecha no valida";
         errors.finEstudios = 'Fecha no valida';
-        errors.tituloFile = "Documento no valido";
-        errors.cedulaFile = 'Documento no valido';
+        //errors.tituloFile = "Documento no valido";
+        //errors.cedulaFile = 'Documento no valido';
         errors.decisionPsicologo = "Campo no valido";
         errors.razonIngreso = "Campo no valido";
 

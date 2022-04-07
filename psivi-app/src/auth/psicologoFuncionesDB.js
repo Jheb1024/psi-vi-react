@@ -64,8 +64,8 @@ export const registro = async function registrarPsicologo(email, password1){
     }
 }
 
-Swal.fire({
+/*Swal.fire({
     icon: 'error',
     title: 'Oops...',
     text: 'Los campos estan vacios',
-  })
+  })*/
