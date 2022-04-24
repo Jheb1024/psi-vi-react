@@ -4,8 +4,10 @@ import { getFirestore, collection, getDocs, getDoc, doc, setDoc, onSnapshot } fr
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { useState, useEffect } from "react";
 import PerfilPaciente from './PerfilPaciente';
+import { sidebar } from '../../Componentes/Siderbar/sidebar';
+import {Link, Router, Switch, Route, Routes} from 'react-router-dom';
 
-
+import Calendario from './Calendario';
 
 
  const PacienteHome = ({ID})=>{
@@ -51,9 +53,12 @@ const db = getFirestore(app);
   return (
 
     <div>PacienteHome
-      
+    
+
       {user ? <PerfilPaciente Perfil={user} uid={ID}/> : null}
-      <div>nombre</div>
+    
+
+
     </div>
   )
 }

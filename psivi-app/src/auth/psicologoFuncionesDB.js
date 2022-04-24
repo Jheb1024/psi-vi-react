@@ -70,7 +70,7 @@ export const registro = async function registrarPsicologo(
       apellidoMaterno: apellidoMaterno,
       edad: edad,
       fechaNacimiento: fechaNacimiento,
-      cedulaFile: cedulaFile,
+      cedula: cedulaFile,
       decisionPsicologo: decisionPsicologo,
       institucionEgreso: institucionEgreso,
       inicioEstudios: inicioEstudios,

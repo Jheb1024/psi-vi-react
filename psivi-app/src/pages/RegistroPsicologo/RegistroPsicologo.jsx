@@ -100,6 +100,11 @@ const Basic = () => (
               </div>
               <div className='col'>
               <div class="mb-3">
+              <label htmlFor='cedulaFile'>Cédula</label><br/>
+                <Field type="text" name="cedulaFile" placeholder="12345687"/>
+                </div>
+                <ErrorMessage name="cedulaFile" component="div" />
+                <div class="mb-3">
                 <label htmlFor='inicioEstudios'>Inicio de estudios</label><br/>
                 <Field type="date" name="inicioEstudios" placeholder="Inicio de estudios"/></div>
                 <ErrorMessage name="inicioEstudios" component="div" />
