@@ -31,13 +31,14 @@ function InicioSesion() {
                 console.log(doc.data(), doc.data().correo, doc.data().rol);
                 const roldata = doc.data().rol;
                 if (roldata === "admin") {
-                    //agregar home admin 
+                   window.location.href = "/home-admin";
                 } else if (roldata === "psicologo") {
-                    //agregar home psico
+                    window.location.href="/home-psicologo";
                 } else if (roldata === "paciente") {
                     window.location.href = "/home-paciente";
                 } else {
-                   
+            
+                    
                 }
             })
         }
@@ -88,17 +89,17 @@ function InicioSesion() {
 
     return (
         <div className="container">
-            <div class="wrapper fadeInDown">
+            <div className="wrapper fadeInDown">
             <div id="formContent">
-                <div class="fadeIn first">
+                <div className="fadeIn first">
                     Iniciar Sesion
                 </div>
 
 
                 <form className="formulario" onSubmit={submitHandler}>
-                    <input type="text" id="email" class="fadeIn second" name="email" placeholder="Usuario" />
-                    <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" />
-                    <input type="submit" class="fadeIn fourth" value="Entrar" />
+                    <input type="text" id="email" className="fadeIn second" name="email" placeholder="Usuario" />
+                    <input type="password" id="password" className="fadeIn third" name="login" placeholder="Contraseña" />
+                    <input type="submit" className="fadeIn fourth" value="Entrar" />
                 </form>
 
 

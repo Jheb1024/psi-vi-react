@@ -8,6 +8,7 @@ import { administradoresP } from "D:/Proyecto/psi-vi-react/psivi-app/src/auth/pa
 export function Landing(){
 
   
+
     administradoresP();
 
     return (
