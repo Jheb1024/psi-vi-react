@@ -42,7 +42,7 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
   } else {
     // doc.data() will be undefined in this case
     //setUserPatient(null);
-    console.log("No such document!");
+    //console.log("No such document!");
   }
 
   if(docSnapPs.exists() && userPsyco === null){
@@ -51,9 +51,9 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
   }else {
     // doc.data() will be undefined in this case
     //setUserPsyco(null);
-    console.log("No such document!");
+    //console.log("No such document!");
   }
-      console.log("mostramos el user hook", userPatient);
+      //console.log("mostramos el user hook", userPatient);
   }else{
     setUserPatient(null);
     setUserPsyco(null);
@@ -80,10 +80,10 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="/"><Nav.Link >Precios</Nav.Link></LinkContainer>
+            <LinkContainer to='/public/precios'><Nav.Link >Precios</Nav.Link></LinkContainer>
             <LinkContainer to="/psicologos"><Nav.Link >Psicologos</Nav.Link></LinkContainer>
             <LinkContainer to="/"><Nav.Link >Categorías</Nav.Link></LinkContainer>
-            <LinkContainer to="/"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
+            <LinkContainer to="/public/sobre-nosotros"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
 
           </Nav>
           <Nav>
@@ -94,6 +94,8 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
             {userPsyco ? <NavDropdown title= {<FaUser/>} id="">
               <NavDropdown.Item href="/home-psicologo">Psicologos</NavDropdown.Item>
               <NavDropdown.Item href="/home-psicologo">Pacientes</NavDropdown.Item>
+              <NavDropdown.Item href="/usuario/psicologo/calendario">Agenda</NavDropdown.Item>
+              
             </NavDropdown> : null}
             {userPatient ? <NavDropdown title= {<FaUser/>} id="">
               <NavDropdown.Item href="/home-paciente">Mi cuenta</NavDropdown.Item>

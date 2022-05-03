@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './PerfilCompletoPsico.css'
 import LoginRegisterModal from '../../Componentes/LoginRegisterModal/LoginRegisterModal';
+import Time from '../../Componentes/Schedule/Time';
 
 function PerfilCompletoPsico() {
     const location = useLocation();
     console.log(location, " useLocation Hook");
     const psico = location.state?.data;
     const [date, setDate] = useState(new Date());
+    const [showTime, setShowTime] = useState(false) 
+
+
     return (
         <div>
             <br></br>
@@ -38,7 +42,7 @@ function PerfilCompletoPsico() {
                     <Col xs lg="3">
                         <h3 className='text-center'>Agenda tu cita</h3>
                         <div className='calendar-container'>
-                            <Calendar onChange={setDate} value={date} />
+                            <Calendar onChange={setDate} value={date} onClickDay={()=>setShowTime(true)}/>
                         </div>
                         <p className='text-center'>
                             <span className='blod'>Fecha seleccionada: </span>
@@ -47,8 +51,11 @@ function PerfilCompletoPsico() {
                         {/**Aqui debemos assegurarnos si estálogueado entonces agenda la cita y hace el pago 
                          *si no, entonces tiene que registrarse...
                         */}
-                        <LoginRegisterModal></LoginRegisterModal>
+                        <Time showTime={showTime} date={date}></Time>
+                        
+                        
                     </Col>
+                    
                     
                 </Row>
             </Container>

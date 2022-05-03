@@ -22,6 +22,9 @@ import AdminHome from './pages/Admin/AdminHome';
 import Psicologos from './pages/Public/Psicologos';
 import Calendario from './pages/Paciente/Calendario';
 import PerfilCompletoPsico from './pages/Public/PerfilCompletoPsico';
+import Schedule from './pages/Psicologo/Schedule';
+import Nosotros from './pages/Public/Nosotros';
+import Precios from './pages/Public/Precios';
 //Aqui siempre vamos a definir nuestras rutas
 const auth = getAuth(app);
 
@@ -56,6 +59,9 @@ onAuthStateChanged(auth, (usuarioFirebase)=>{
           <Route path='/home-admin' element={usuarioGlobal && <AdminHome ID={usuarioGlobal}/>}></Route>
           <Route  path='/usuario/paciente/calendario' element={<Calendario/>}/>
           <Route path='/public/perfilcompleto/user' element={<PerfilCompletoPsico/>}></Route>
+          <Route path='/usuario/psicologo/calendario' element={usuarioGlobal &&<Schedule ID={usuarioGlobal}/>}></Route>
+          <Route path='/public/sobre-nosotros' element={<Nosotros/>}></Route>
+          <Route path='/public/precios' element={<Precios/>}></Route>
         </Routes>
        
 
