@@ -89,7 +89,7 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
             <LinkContainer to="/psicologos"><Nav.Link >Psicologos</Nav.Link></LinkContainer>
             <LinkContainer to="/"><Nav.Link >Categorías</Nav.Link></LinkContainer>
 
-            <LinkContainer to="/"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
+            <LinkContainer to="/Nosotros"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
 
           </Nav>
           <Nav>

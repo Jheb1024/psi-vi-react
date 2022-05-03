@@ -61,7 +61,7 @@ const Basic = () => (
 
           <legend>Registro paciente:</legend>
          
-          <div className='row'>
+          <div className='row'/>
            
               <div class="mb-3">
                 <Field type="text" name="nombre" className="form-input" placeholder="Nombre" />

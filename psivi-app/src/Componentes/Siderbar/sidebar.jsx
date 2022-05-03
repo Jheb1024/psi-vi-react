@@ -3,7 +3,7 @@ import {BsCalendarEvent} from "react-icons/bs";
 export const sidebar =[
     {
         title: 'Calendario',
-        path: '/usaurio/paciente/calendario',
+        path: '/usuario/paciente/calendario',
         icon: <BsCalendarEvent/>,
         cName: 'nav-text'
     }

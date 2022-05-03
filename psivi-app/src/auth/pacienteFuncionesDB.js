@@ -19,12 +19,7 @@ export const administradoresP = async function getAdmin() {
 //aqui si
 //Nuestra funcin debe ser asincrona
 //Mandar todos los parametros del formulario
-
-export const registro = async function registrarPaciente(email, password1, nombre, apm, app1, edad, fechana, motivo, dias){
-
-
 export const registro = async function registrarPaciente(email, password1, nombre, apm, app1, edad, fechana) {
-
     const auth = getAuth(app); //primero debemos saber cual es nuestro usuario por defecto no existe
     //pero auth nos da uatorización
 
@@ -44,24 +39,6 @@ export const registro = async function registrarPaciente(email, password1, nombr
         //rellenar con todos los parametros
         await setDoc(docRef, {
             nombre: nombre,
-
-
-            apellidoPaterno : app,
-
-            apellidoPaterno : app1,
-
-            apellidoMaterno : apm,
-            Edad : edad,
-            fechaNacimiento : fechana,
-            correo : email,
-            password : password1,
-
-            motivo : motivo,
-            Dias : dias
-
-            
-        }).then(()=>{
-
             apellidoPaterno: app1,
             apellidoMaterno: apm,
             Edad: edad,
@@ -71,7 +48,6 @@ export const registro = async function registrarPaciente(email, password1, nombr
 
 
         }).then(() => {
-
             console.log("Usuario registrado");
         }).catch(err => {
             console.log("Hubo un error al registrarse" + err.message);
@@ -86,10 +62,6 @@ export const registro = async function registrarPaciente(email, password1, nombr
 
 
     }
-
-
-}
-
 }
 
 
@@ -123,4 +95,3 @@ export function GetPaciente() {
     console.log("Aprace el uid desde el hook " + count);
 
 }
-
