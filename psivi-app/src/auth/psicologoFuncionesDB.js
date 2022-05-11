@@ -78,6 +78,7 @@ export const registro = async function registrarPsicologo(
       razonIngreso: razonIngreso,
       finEstudios: finEstudios,
       tituloFile: tituloFile,
+      idUser:nuevoPsicologo.user.uid
     })
       .then(() => {
         console.log("Usuario registrado");

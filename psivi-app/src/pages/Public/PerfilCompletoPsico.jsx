@@ -7,14 +7,14 @@ import './PerfilCompletoPsico.css'
 import LoginRegisterModal from '../../Componentes/LoginRegisterModal/LoginRegisterModal';
 import Time from '../../Componentes/Schedule/Time';
 
-function PerfilCompletoPsico() {
+function PerfilCompletoPsico({user}) {
     const location = useLocation();
     console.log(location, " useLocation Hook");
     const psico = location.state?.data;
     const [date, setDate] = useState(new Date());
     const [showTime, setShowTime] = useState(false) 
 
-
+    console.log( "perfil completo iduser", psico.idUser)
     return (
         <div>
             <br></br>
@@ -51,7 +51,8 @@ function PerfilCompletoPsico() {
                         {/**Aqui debemos assegurarnos si estálogueado entonces agenda la cita y hace el pago 
                          *si no, entonces tiene que registrarse...
                         */}
-                        <Time showTime={showTime} date={date}></Time>
+                        
+                        <Time showTime={showTime} date={date} psico={psico} paciente={user}></Time>
                         
                         
                     </Col>

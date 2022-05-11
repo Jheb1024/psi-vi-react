@@ -93,7 +93,7 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
             </NavDropdown> : null}
             {userPsyco ? <NavDropdown title= {<FaUser/>} id="">
               <NavDropdown.Item href="/home-psicologo">Psicologos</NavDropdown.Item>
-              <NavDropdown.Item href="/home-psicologo">Pacientes</NavDropdown.Item>
+              <NavDropdown.Item href="/usuario/psicologo/mispacientes">Pacientes</NavDropdown.Item>
               <NavDropdown.Item href="/usuario/psicologo/calendario">Agenda</NavDropdown.Item>
               
             </NavDropdown> : null}

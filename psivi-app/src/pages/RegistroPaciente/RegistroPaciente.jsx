@@ -1,12 +1,17 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { registro } from "C:/Users/jhan_/Documents/PsiVi_react/psi-vi-react/psivi-app/src/auth/pacienteFuncionesDB.js";
+import './Registro.css';
+import {Col, Container, Row} from 'react-bootstrap'
 
 const RegistroPaciente = () => (
 
 
 
-  <div>
+  <div className='registro'>
+    <Container>
+    <Row>
+      <Col>
     <Formik
       initialValues={{ email: '', password: '', nombre:'',
       apellidoPaterno:'',
@@ -17,7 +22,7 @@ const RegistroPaciente = () => (
       validate={values => {
         const errors = {};
         if (!values.email) {
-          errors.email = 'Required';
+          errors.email = 'Requerido';
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
@@ -25,6 +30,15 @@ const RegistroPaciente = () => (
         }
         if (values.password.length < 8) {
           errors.password = "La contraseña es demasiado débil";
+        }
+        if (!values.nombre) {
+          errors.nombre = 'Nombre equerido';
+        }
+        if (!values.apellidoPaterno) {
+          errors.apellidoPaterno = 'Apellido requerido';
+        }
+        if (!values.apellidoMaterno) {
+          errors.apellidoMaterno = 'Apellido requerido';
         }
         return errors;
       }}
@@ -38,9 +52,10 @@ const RegistroPaciente = () => (
     >
 
       {({ isSubmitting }) => (
+
         <Form>
           <br></br><br></br>
-
+          
           <legend>Registro paciente:</legend>
          
           <div className='row'>
@@ -88,12 +103,22 @@ const RegistroPaciente = () => (
        
             
           </div>
-          <button type="submit" disabled={isSubmitting}>
+          <button type="submit" disabled={isSubmitting} style={{border:'0px', fontSize:'20px'}}>
             Registrar
           </button>
         </Form>
       )}
     </Formik>
+    </Col>
+    <Col>
+    <div className='frase'>
+    Mira en las profundidades de tu propia alma y aprende primero a conocerte a ti mismo, 
+    entonces entenderás por qué esta enfermedad te atacó y quizás de allí en adelante 
+    evites enfermarte.
+    </div>
+    </Col>
+    </Row>
+    </Container>
   </div>
 );
 

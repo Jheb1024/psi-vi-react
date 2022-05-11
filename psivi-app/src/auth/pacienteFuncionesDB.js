@@ -45,6 +45,7 @@ export const registro = async function registrarPaciente(email, password1, nombr
             fechaNacimiento: fechana,
             correo: email,
             password: password1,
+            idUser:nuevoPaciente.user.uid
 
 
         }).then(() => {

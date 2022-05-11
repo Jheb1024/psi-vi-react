@@ -26,7 +26,7 @@ function Times(props) {
         })}
         <div>
             {info? `Horario de cita: ${event} ${ props.date.toDateString()}`: null}
-            <LoginRegisterModal fecha={props.date} time={event}></LoginRegisterModal>
+            <LoginRegisterModal fecha={props.date} psico={props.psico} paciente={props.paciente}time={event}></LoginRegisterModal>
         </div>
     </div>
   )
