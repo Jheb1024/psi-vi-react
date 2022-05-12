@@ -5,11 +5,12 @@
 .footer-dark {
     position: absolute;
     
-    width: 1325px;
+    width: 100%;
     padding:50px 0;
     color:#f0f9ff !important;
     background-color:#628bd0;
     display: flex;
+    
   }
   
   .footer-dark h3 {

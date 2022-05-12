@@ -24,7 +24,7 @@ function Footer() {
                 </div>
                 <div className="col-md-6 item text">
                     <h3>Psi-Vi Psicología Virtual</h3>
-                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    <p>Brindar servicios psicológicos especializados de forma virtual para personas que busquen una forma diferente y que se adapten a su forma de vida.</p>
                 </div>
                 <div className="col item social"><a href="#"><i className="icon ion-social-facebook"></i></a><a href="#"><i className="icon ion-social-twitter"></i></a><a href="#"><i className="icon ion-social-snapchat"></i></a><a href="#"><i className="icon ion-social-instagram"></i></a></div>
             </div>
