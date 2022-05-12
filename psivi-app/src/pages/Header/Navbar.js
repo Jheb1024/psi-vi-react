@@ -82,7 +82,7 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
           <Nav className="me-auto">
             <LinkContainer to='/public/precios'><Nav.Link >Precios</Nav.Link></LinkContainer>
             <LinkContainer to="/psicologos"><Nav.Link >Psicologos</Nav.Link></LinkContainer>
-            <LinkContainer to="/"><Nav.Link >Categorías</Nav.Link></LinkContainer>
+          
             <LinkContainer to="/public/sobre-nosotros"><Nav.Link >¿Quiénes somos?</Nav.Link></LinkContainer>
 
           </Nav>
@@ -92,7 +92,7 @@ onAuthStateChanged(auth, async(usuarioFirebase)=>{
               <NavDropdown.Item href="registro-paciente">Paciente</NavDropdown.Item>
             </NavDropdown> : null}
             {userPsyco ? <NavDropdown title= {<FaUser/>} id="">
-              <NavDropdown.Item href="/home-psicologo">Psicologos</NavDropdown.Item>
+              <NavDropdown.Item href="/home-psicologo">Mi información</NavDropdown.Item>
               <NavDropdown.Item href="/usuario/psicologo/mispacientes">Pacientes</NavDropdown.Item>
               <NavDropdown.Item href="/usuario/psicologo/calendario">Agenda</NavDropdown.Item>
               

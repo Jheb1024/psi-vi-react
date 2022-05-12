@@ -26,7 +26,7 @@ function Precios() {
                 Una cita por videollamada de 50 minutos para una persona.
             </p>
            
-            <Button className='btn btn-outline-secondary' to='/' style={{color: '#F1ECE2'}}>Agendar cita</Button>
+            <Button className='btn btn-outline-secondary' onClick={()=>window.location.href="/psicologos"} style={{color: '#F1ECE2'}}>Agendar cita</Button>
            
         </div>
         </div>
@@ -42,7 +42,7 @@ function Precios() {
                 Una cita por videollamada de 50 minutos para dos personas.
             </p>
            
-            <Button className='btn btn-outline-secondary' to='/' style={{color: '#F1ECE2'}}>Agendar cita</Button>
+            <Button className='btn btn-outline-secondary' onClick={()=>window.location.href="/psicologos"} style={{color: '#F1ECE2'}}>Agendar cita</Button>
            
         </div>
         </div>
